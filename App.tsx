@@ -226,14 +226,17 @@ const App: React.FC = () => {
           </p>
         </div>
         
-        {/* Connection Counter */}
+        {/* Connection Counter - CLICKABLE TO OPEN PANEL */}
         {connections.length > 0 && (
-          <div className="pointer-events-auto mt-4 md:mt-0 self-end bg-black/40 backdrop-blur-md border border-purple-500/30 px-4 py-2 md:px-6 md:py-3 rounded-full text-purple-200 text-xs md:text-sm flex items-center shadow-[0_0_15px_rgba(168,85,247,0.3)] animate-fade-in">
-            <span className="w-2 h-2 bg-pink-400 rounded-full mr-3 animate-ping"></span>
-            <span className="font-light tracking-wider">
+          <button 
+            onClick={() => setIsConnectionPanelOpen(true)}
+            className="pointer-events-auto mt-4 md:mt-0 self-end bg-black/40 hover:bg-black/60 backdrop-blur-md border border-purple-500/30 px-4 py-2 md:px-6 md:py-3 rounded-full text-purple-200 text-xs md:text-sm flex items-center shadow-[0_0_15px_rgba(168,85,247,0.3)] hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] animate-fade-in transition-all cursor-pointer group"
+          >
+            <span className="w-2 h-2 bg-pink-400 rounded-full mr-3 animate-ping group-hover:bg-pink-300"></span>
+            <span className="font-light tracking-wider group-hover:text-purple-100">
                 {settings.language === 'zh' ? '共鸣点:' : 'Resonance Points:'} <b className="text-white ml-1">{connections.length}</b>
             </span>
-          </div>
+          </button>
         )}
       </div>
 
