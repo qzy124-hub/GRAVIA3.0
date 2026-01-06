@@ -1,0 +1,7 @@
+{
+  "name": "Copy of 0103",
+  "description": "A 3D visualization of human emotional connections. Upload your daily thoughts, and let AI connect you with others globally who share similar feelings, forming a constellation of empathy.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
